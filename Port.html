@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="Port.css">
+    <link rel="stylesheet" href="Port.js">
+    <script src="https://kit.fontawesome.com/cc5ccced42.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- ------------------------------header--------------------------------------------------------------------------------------------- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="Something went wrong!" class="logo">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+                    <li><a href="#"><i class="fa-solid fa-eject"></i> About</a></li>
+                    <li><a href="#"><i class="fa-brands fa-servicestack"></i> Services</a></li>
+                    <li><a href="#"><i class="fa-solid fa-person-dress"></i></i> Portfolio</a></li>
+                    <li><a href="#"><i class="fa-solid fa-phone"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I'm <span>Mimansa</span><br> My Skills- HTML, CSS, Java Script</h1>
+        </div>
+        <form><input type="button" id="button1" value="Know More"></form>
+    </div>
+    <!-- ------------------------------about----------------------------------------------------------------------------------------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/mee.png" alt="error" class="mee">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="h1">About Me</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A doloribus odit eligendi cupiditate
+                        ratione officia, commodi sapiente autem accusantium sint voluptatum sunt, tempore id laboriosam
+                        quae quia? Eum voluptatum porro, placeat ex deserunt facilis officiis voluptas, enim omnis
+                        aliquid doloremque libero molestiae ducimus, consectetur repellendus molestias? Modi mollitia
+                        accusantium maiores.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                            Skills
+                        </p>
+                        <p class="tab-links" onclick="opentab('experience')">
+                            Experience
+                        </p>
+                        <p class="tab-links" onclick="opentab('education')">
+                            Education
+                        </p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Designing Web/App Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021- Current</span><br>UI/UX Design Training at ET Institute</li>
+                            <li><span>Web Development</span><br>Designing Web/App Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Designing Web/App Development</li>
+                            <li><span>App Development</span><br>Building Android/iOS apps</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ------------------------------services--------------------------------------------------------------------------------------------- -->
+<div id="services">
+<div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+    <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>Web Design</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam assumenda debitis illum itaque reiciendis voluptatem! Repellendus a commodi ipsum sint!</p>
+        <a href="#">Learn More</a>
+    </div>
+    <div>
+        <i class="fa-solid fa-crop-simple"></i>
+        <h2>UI/UX Design</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam assumenda debitis illum itaque reiciendis voluptatem! Repellendus a commodi ipsum sint!</p>
+        <a href="#">Learn More</a>
+    </div>
+    <div>
+        <i class="fa-brands fa-app-store"></i>
+        <h2>App Design</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam assumenda debitis illum itaque reiciendis voluptatem! Repellendus a commodi ipsum sint!</p>
+        <a href="#">Learn More</a>
+    </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ------------------------------script java--------------------------------------------------------------------------------------------- -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+
+</html>
